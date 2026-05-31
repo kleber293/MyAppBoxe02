@@ -6,7 +6,7 @@ Desenvolvi este projeto utilizando apenas tecnologias nativas (HTML5, CSS3 e Jav
 
 ---
 
-## ✨ Funcionalidades Principais
+## Funcionalidades Principais
 
 * **Fundo Cósmico Interativo & Trilha Fluida:** Sistema dinâmico construído em `HTML5 Canvas` que reage ao movimento do cursor com estrelas cadentes, nebulosas e uma trilha elástica ultra-suave (otimizada com algoritmos de interpolação LERP para eliminar picos ou travamentos nas curvas).
 * **Command Palette (Ctrl + K / Cmd + K):** Uma barra de ferramentas global e instantânea inspirada em IDEs modernas (como VS Code). Permite buscar aplicativos, mudar temas e rodar rotinas internas sem tirar as mãos do teclado.
