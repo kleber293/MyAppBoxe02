@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyAppBox — Sua caixa de apps</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Fundo cósmico interativo -->
+  <canvas id="cosmosCanvas"></canvas>
+
+  <!-- Command Palette -->
+  <div class="palette-overlay" id="paletteOverlay">
+    <div class="palette-box" id="paletteBox">
+      <div class="palette-search-wrap">
+        <i class="fa fa-terminal palette-icon"></i>
+        <input type="text" id="paletteInput" placeholder="Digite um comando ou nome de app..." autocomplete="off"/>
+        <span class="palette-hint">ESC para fechar</span>
+      </div>
+      <div class="palette-results" id="paletteResults"></div>
+    </div>
+  </div>
+
+  <!-- Theme Picker -->
+  <div class="theme-picker" id="themePicker">
+    <button class="theme-toggle-btn" id="themeToggleBtn" title="Trocar tema">
+      <i class="fa fa-palette"></i>
+    </button>
+    <div class="theme-options" id="themeOptions">
+      <button class="theme-opt" data-theme="cosmic" title="Cosmic">🌌</button>
+      <button class="theme-opt" data-theme="neon"   title="Neon">⚡</button>
+      <button class="theme-opt" data-theme="nature" title="Nature">🌿</button>
+      <button class="theme-opt" data-theme="dark"   title="Dark">🖤</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1 class="title">✦ MyAppBox</h1>
+      <p class="subtitle">Acesso rápido aos seus apps favoritos</p>
+
+      <!-- Barra de busca -->
+      <div class="search-wrapper">
+        <i class="fa fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Buscar apps... (/ para focar)" autocomplete="off"/>
+        <span class="search-clear" id="clearBtn"><i class="fa fa-times"></i></span>
+      </div>
+
+      <!-- Filtros por categoria -->
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="favoritos">Favoritos</button>
+        <button class="filter-btn" data-filter="google">Google</button>
+        <button class="filter-btn" data-filter="social">Social</button>
+        <button class="filter-btn" data-filter="dev">Dev</button>
+        <button class="filter-btn" data-filter="ia">IA</button>
+        <button class="filter-btn" data-filter="outros">Outros</button>
+      </div>
+    </header>
+
+    <!-- Grid de cards (renderizado via JS) -->
+    <main class="grid" id="appGrid"></main>
+
+    <!-- Mensagem de nenhum resultado -->
+    <div class="no-results" id="noResults">
+      <i class="fa fa-magnifying-glass"></i>
+      <p>Nenhum app encontrado para "<span id="searchTerm"></span>"</p>
+    </div>
+
+    <footer>
+      <p>Desenvolvido por <strong>Clebson Marques</strong> ✦
+        <span class="footer-hint">Ctrl+K = Command Palette &nbsp;|&nbsp; / = Busca &nbsp;|&nbsp; 1-9 = Abrir app</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
