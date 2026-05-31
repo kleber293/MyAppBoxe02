@@ -1,5 +1,7 @@
 # ✦ MyAppBox — Minha Caixa de Apps Pessoal
 
+![Preview do MyAppBox](images/image.png)
+
 O **MyAppBox** é uma dashboard/caixa de ferramentas minimalista e de alta performance que criei para consolidar e acelerar o acesso aos meus aplicativos, serviços e ferramentas web mais utilizados no dia a dia. 
 
 Desenvolvi este projeto utilizando apenas tecnologias nativas (HTML5, CSS3 e JavaScript puro), sem frameworks pesados, para garantir um carregamento instantâneo. A interface conta com um fundo cósmico imersivo, transições fluidas em 3D, suporte a múltiplos temas e uma paleta de comandos avançada controlada por teclado.
